@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  /* board ko agr body ke center mai lana hai toh neeche ki lines likho
+   */
+
+  display: flex;
+  justify-content: center; /*isce horizontal centre*/
+
+  align-items: center; /*isce vertical center*/
+}
+
+.board {
+  height: 85vh;
+  width: 80vw;
+  background-color: #1a0d52;
+  border-radius: 10px;
+}
+
+/* make one ball or iski initial position board ke centre main hona chahiye */
+
+/* how to make ball isko border radius se kardo */
+.ball {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fe5196;
+  position: fixed; /*fixed matlab keel thok diya ab wo wha se hilega nahi*/
+
+  top: 45vh; /*page ke hisaab se neeche aa jayga*/
+
+  left: 50vw;
+}
+
+.paddle {
+  background-color: #fe5196;
+  position: fixed;
+  height: 120px;
+  width: 15px;
+  border-radius: 2px;
+}
+
+.left {
+  /* left paddle ko top se(page)  40% neeche aana hai*/
+  top: 40vh;
+
+  left: 12vw;
+}
+
+.right {
+  top: 40vh;
+  right: 12vw;
+}
+
+/* ball ko move karna ke liye we need to use dom */
+
+.fa-circle {
+  color: yellow;
+  font-size: 2rem;
+}
+
+.scorecard {
+  display: flex;
+  height: 60px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: 1 1 1;
+}
+
+.separator {
+  width: 4px;
+  height: 70%;
+  background-color: black;
+}
